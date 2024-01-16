@@ -73,4 +73,4 @@ jobs:
         with:
           context: .
           push: true
-          tag: jaap17/spring-boot-app:${{ env.DATE }}
+          tags: jaap17/spring-boot-app:${{ env.DATE }}
