@@ -8,5 +8,4 @@ on:
 jobs:
   call_workflow_in_remote_repository:
     uses: jaap17/ArtifactsPassingToMultipleJobs/.github/workflows/clone_repo_using_gh_pat.yaml@main
-    secrets:
-      GH_PAT: ${{ secrets.GH_PAT_CALLER }}
+    secrets: inherit
