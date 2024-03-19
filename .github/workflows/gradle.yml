@@ -71,7 +71,7 @@ jobs:
       - name: Check gihub env
         run: |
           CHECK=hello
-          echo "CHECK=$CHECK" >> GITHUB_ENV
+          echo "CHECK=$CHECK" >> $GITHUB_ENV
 
       - name: Get check
         run: echo $CHECK
