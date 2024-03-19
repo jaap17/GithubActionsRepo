@@ -68,9 +68,17 @@ jobs:
       - name: Set env
         run: echo "DATE=$(date +%s)" >> $GITHUB_ENV
 
-      - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: jaap17/spring-boot-app:${{ env.DATE }}
+      - name: Check gihub env
+        run: |
+          CHECK=hello
+          echo "CHECK=$CHECK" >> GITHUB_ENV
+
+      - name: Get check
+        run: echo $CHECK
+
+      # - name: Build and push
+      #   uses: docker/build-push-action@v3
+      #   with:
+      #     context: .
+      #     push: true
+      #     tags: jaap17/spring-boot-app:${{ env.DATE }}
